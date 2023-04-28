@@ -1,0 +1,16 @@
+.header{
+    width: calc(60vw - 17px);
+    height: 80px;
+    margin-left: 5vw;
+    background-color: aqua;
+    position: fixed;
+    padding: 20px 15px;
+    background-image: linear-gradient(to right, $color-bg, $color-dark-bg );
+    z-index: 100;
+    
+    .logo{
+        @extend %logo;
+    }
+
+
+}

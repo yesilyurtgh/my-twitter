@@ -1,0 +1,107 @@
+.profil {
+    position: absolute;
+    width: 95%;
+    
+    
+    top: 50px;
+    left: -1000px;
+    
+    
+
+    figure {
+        position: relative;
+        width: 100%;
+        z-index: 10;
+        img:nth-child(1) {
+            width: 90%;
+            margin-left: 5px;
+           
+            
+        }
+
+        img:nth-child(2) {
+           
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            left: 0;
+            bottom: -75px;
+        }
+    }
+
+    button {
+        @extend %button;
+        position: absolute;
+        right: 50px;
+        top: 230px;
+        cursor: pointer;
+
+    }
+
+    h3 {
+        margin-top: 70px;
+        margin-left: 20px;
+    }
+
+    h5 {
+
+        margin-left: 20px;
+    }
+
+    p {
+        width: 90%;
+        margin-top: 10px;
+        margin-left: 20px;
+    }
+
+    .joined {
+        margin-top: 10px;
+        margin-left: 20px;
+    }
+
+    .follow {
+        span {
+            font-weight: bold;
+        }
+    }
+
+    h4 {
+        margin-top: 25px;
+        margin-left: 20px;
+    }
+
+    .profil-cards{
+        position: relative;
+        height: 550px;
+        margin: 20px;
+        border-bottom: 1px solid $color-text ;
+        figure:nth-of-type(1) {
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            
+           img{
+            width: 100%;
+           }  
+        }
+        p{
+            margin-left: 60px;
+            padding-top: 10px;
+            span{font-weight: bold;}
+        }
+        figure:nth-of-type(2) {
+            margin-top: 25px;
+            position: absolute;
+            width: 80%;
+            margin-left: 70px;
+           img{
+            width: 100%;
+           } 
+           .statistic{
+            margin-left: 25px;
+            i{margin-left: 20px};
+           } 
+        } 
+       
+    }
+}

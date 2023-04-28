@@ -1,0 +1,69 @@
+
+//flexi tek satırda kullanabilmek için bu mixini yazdım
+@mixin flex($jc, $ai, $gap) {
+    display: flex;
+    justify-content: $jc;
+    align-items: $ai;
+    gap: #{$gap}px;
+}
+
+//iconlar hover olunca açıklama penceresi çıkması için, çıkacak açıklamayı content olarak alan bu mixini yazdım
+@mixin icon-explain($content) {
+    position: relative;
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -15px;
+        font-size: 10px;
+        margin-left: -15px;
+        
+       
+    }
+
+    &:hover::after {
+        content: $content;
+        
+        margin-left: -15px;
+        bottom: -25px;
+       
+        background-color: rgb(209, 206, 206);
+        border-radius: 10px;
+        transition: all .5s linear;
+        
+        
+    }
+}
+
+// logo için hover 
+@mixin logo-hover{
+    position: relative;
+   
+    &:hover{
+        background-size: 90%;
+        box-shadow: 0 0 10px $color-icons;
+        
+    }    
+    
+    &::after{
+        content: "";
+        position: absolute;
+        width: 160px;
+      
+    }
+    
+    &:hover::after {
+       
+        content: "Tweet yaz";
+        font-family: $font-logo;
+        font-size: 20px;
+        font-weight: bold;
+        margin-left: 40px;
+        color: $color-icons;
+        padding: 5px;
+        background-color: rgb(209, 206, 206);
+        border-radius: 10px;
+        transition: all 1s ease;
+    }
+}
+

@@ -1,0 +1,56 @@
+.aside-left {
+    background-color: $color-bg;
+    width: 6vw;
+    height: 100vh;
+    margin: 0;
+    @include flex(center, center, 15);
+    flex-direction: column;
+    position: fixed;
+
+    a {
+        font-size: 25px;
+        color: $color-icons;
+        border: 1px solid transparent;
+        border-radius: 50%;
+        padding: 0;
+        transition: all .5s ease;
+
+        &:hover {
+            padding: 5px;
+            background-color: $color-text;
+            transition: all .5s ease;
+        }
+        .fa-user{
+            @include icon-explain("Profil");
+        }
+        .fa-house{
+            @include icon-explain("Anasayfa")
+        }
+        .fa-hashtag{
+            @include icon-explain("Hashtag")
+        }
+        .fa-bell{
+            @include icon-explain("Bildirimler")
+        }
+        .fa-envelope{
+            @include icon-explain("Mesajlar")
+        }
+        .fa-bookmark{
+            @include icon-explain("Bookmark")
+        }
+        .fa-circle-check{
+            @include icon-explain("Hesabını onayla")
+        }
+    }
+
+    .logo {
+        @extend %logo;
+         
+
+    }
+}
+@media(max-width:700px){
+    .aside-left{
+        width: 10vw;
+    }
+}

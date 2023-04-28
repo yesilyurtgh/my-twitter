@@ -1,0 +1,13 @@
+%logo{
+    background-image: url(/images/logo-twitter.png);
+    background-position: center;
+    background-size: 80%;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid $color-text;
+    box-shadow: 0 0 5px $color-text;
+    cursor: pointer;
+    
+    @include logo-hover;
+}
